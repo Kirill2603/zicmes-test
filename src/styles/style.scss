@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("../assets/body-image.jpg") no-repeat;
+  background-size: cover;
+}
+
+#orderForm {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: fit-content;
+  margin: 1rem 2rem 1rem 2rem;
+  box-shadow: 0 0 0 1px white;
+  transform: skewX(-45deg);
+  @media (max-width: 700px) {
+    transform: skewX(0deg);
+  }
+}
+
+#phoneInput {
+  outline: none;
+  border: none;
+  background: none;
+  padding-left: 1rem;
+  width: 18rem;
+  transform: skewX(45deg);
+  @media (max-width: 700px) {
+    transform: skewX(0deg);
+    width: 10rem;
+  }
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  [type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+#submitButton {
+  margin-left: 3px;
+  background-color: #ff0000;
+  border: none;
+  padding: 0.6rem 2rem 0.6rem 2rem;
+  border-left: 2px solid white;
+
+  &:hover {
+    background-color: #da0000;
+  }
+
+  &:active {
+    background-color: #fc2d2d;
+  }
+
+  > p {
+    transform: skewX(45deg);
+    @media (max-width: 700px) {
+      transform: skewX(0deg);
+    }
+    color: white;
+    text-transform: uppercase;
+  }
+}
+
+.errorAlert {
+  display: none;
+  color: red;
+}
+
+.succeedAlert {
+  display: none;
+  color: green;
+}
+
+.alertMessage {
+  transform: skewX(45deg);
+  @media (max-width: 700px) {
+    transform: skewX(0deg);
+    padding: 1rem;
+  }
+  text-align: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  white-space: nowrap;
+}
+
+.show {
+  display: inline-block;
+  @media (max-width: 700px) {
+    display: block;
+  }
+}
